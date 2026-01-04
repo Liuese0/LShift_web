@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LShift - 작지만 빠른 혁신을 일으키는 기술 개발 스타트업. 앱, 게임, 소프트웨어 개발.">
+    <meta name="keywords" content="LShift, 스타트업, 앱개발, 게임개발, 소프트웨어개발, 기술혁신">
+    <meta property="og:title" content="LShift - Shifting the future, LShift">
+    <meta property="og:description" content="작지만 빠른 혁신을 일으키는 기술 개발 스타트업">
+    <meta property="og:type" content="website">
+    <title>LShift - Shifting the future, LShift</title>
+
+    <!-- External Libraries -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="logo-loading">
+                <span class="shift-symbol">&lt;&lt;</span>
+                <span class="loading-text">LShift</span>
+            </div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <div class="loading-code">
+                <span class="typing-code"></span>
+                <span class="cursor">|</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-symbol">&lt;&lt;</span>
+                <span class="logo-text">LShift</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active" data-section="home">Home</a>
+                <a href="#about" class="nav-link" data-section="about">About</a>
+                <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+                <a href="#ideas" class="nav-link" data-section="ideas">Ideas</a>
+                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+            </div>
+            <div class="nav-controls">
+                <button id="theme-toggle" class="control-btn" title="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button id="lang-toggle" class="control-btn" title="Language">
+                    <span class="lang-text">EN</span>
+                </button>
+                <button id="mobile-menu-toggle" class="control-btn mobile-only">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+        <a href="#home" class="mobile-link">Home</a>
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#projects" class="mobile-link">Projects</a>
+        <a href="#ideas" class="mobile-link">Ideas</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="particles" id="particles"></div>
+        <div class="hero-content" data-aos="fade-up">
+            <div class="hero-logo">
+                <span class="hero-symbol">&lt;&lt;</span>
+                <h1 class="hero-title">LShift</h1>
+            </div>
+            <p class="hero-subtitle">
+                <span class="typed-text"></span>
+                <span class="typing-cursor">|</span>
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">
+                    <span data-lang="viewProjects">프로젝트 보기</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <span data-lang="contactUs">연락하기</span>
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span data-lang="scrollDown">Scroll Down</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+        <!-- Easter Egg Character -->
+        <div class="easter-egg-char" data-position="hero">
+            <div class="char-icon">🎮</div>
+            <div class="hit-effect"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span data-lang="aboutTitle">회사 소개</span>
+            </h2>
+            <div class="about-content">
+                <div class="about-concept" data-aos="fade-right">
+                    <div class="shift-demo">
+                        <div class="code-line">
+                            <span class="code-comment">// Left Shift Operator</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="code-number">1</span>
+                            <span class="code-operator">&lt;&lt;</span>
+                            <span class="code-number">1</span>
+                            <span class="code-operator">=</span>
+                            <span class="code-result">2</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="code-number">1</span>
+                            <span class="code-operator">&lt;&lt;</span>
+                            <span class="code-number">2</span>
+                            <span class="code-operator">=</span>
+                            <span class="code-result">4</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="code-number">1</span>
+                            <span class="code-operator">&lt;&lt;</span>
+                            <span class="code-number">3</span>
+                            <span class="code-operator">=</span>
+                            <span class="code-result">8</span>
+                        </div>
+                        <div class="code-message">
+                            <span data-lang="shiftMessage">작은 변화로 큰 차이를</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text" data-aos="fade-left">
+                    <h3 data-lang="whoWeAre">우리는 누구인가</h3>
+                    <p data-lang="aboutDesc1">
+                        LShift는 앱, 게임, 소프트웨어 등 다양한 분야의 기술을 개발하는 스타트업입니다.
+                    </p>
+                    <p data-lang="aboutDesc2">
+                        Left Shift 연산자처럼 작은 변화가 기하급수적인 성장을 만들 수 있다는 믿음으로,
+                        우리는 빠르고 혁신적인 솔루션을 제공합니다.
+                    </p>
+                    <div class="core-values">
+                        <div class="value-item">
+                            <i class="fas fa-rocket"></i>
+                            <span data-lang="value1">빠른 혁신</span>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-code"></i>
+                            <span data-lang="value2">기술 중심</span>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <span data-lang="value3">창의성</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Easter Egg Character -->
+        <div class="easter-egg-char" data-position="about">
+            <div class="char-icon">💻</div>
+            <div class="hit-effect"></div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span data-lang="projectsTitle">프로젝트</span>
+            </h2>
+            <div class="project-tabs" data-aos="fade-up" data-aos-delay="100">
+                <button class="tab-btn active" data-category="all">
+                    <span data-lang="tabAll">전체</span>
+                </button>
+                <button class="tab-btn" data-category="app">
+                    <span data-lang="tabApp">앱</span>
+                </button>
+                <button class="tab-btn" data-category="game">
+                    <span data-lang="tabGame">게임</span>
+                </button>
+                <button class="tab-btn" data-category="software">
+                    <span data-lang="tabSoftware">소프트웨어</span>
+                </button>
+            </div>
+            <div class="projects-grid" id="projects-grid">
+                <!-- Projects will be dynamically loaded -->
+            </div>
+        </div>
+        <!-- Easter Egg Character -->
+        <div class="easter-egg-char" data-position="projects">
+            <div class="char-icon">🎯</div>
+            <div class="hit-effect"></div>
+        </div>
+    </section>
+
+    <!-- Ideas & Collaboration Section -->
+    <section id="ideas" class="ideas-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span data-lang="ideasTitle">함께 만들어요</span>
+            </h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                <span data-lang="ideasSubtitle">당신의 아이디어와 제안을 기다립니다</span>
+            </p>
+            <div class="ideas-content">
+                <div class="ideas-info" data-aos="fade-right">
+                    <div class="info-card">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3 data-lang="ideaSubmission">아이디어 응모</h3>
+                        <p data-lang="ideaDesc">
+                            혁신적인 앱이나 게임 아이디어가 있으신가요?
+                            함께 현실로 만들어봅시다.
+                        </p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-handshake"></i>
+                        <h3 data-lang="collaboration">협업 제안</h3>
+                        <p data-lang="collabDesc">
+                            기술 협업, 파트너십, 프로젝트 의뢰 등
+                            다양한 형태의 협업을 환영합니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="ideas-form-container" data-aos="fade-left">
+                    <form id="ideas-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">
+                                <span data-lang="formName">이름</span>
+                                <span class="required">*</span>
+                            </label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">
+                                <span data-lang="formEmail">이메일</span>
+                                <span class="required">*</span>
+                            </label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="type">
+                                <span data-lang="formType">제안 유형</span>
+                                <span class="required">*</span>
+                            </label>
+                            <select id="type" name="type" required>
+                                <option value="idea" data-lang="optionIdea">아이디어 응모</option>
+                                <option value="collaboration" data-lang="optionCollab">협업 제안</option>
+                                <option value="other" data-lang="optionOther">기타</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">
+                                <span data-lang="formMessage">메시지</span>
+                                <span class="required">*</span>
+                            </label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <span data-lang="formSubmit">제출하기</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Easter Egg Character -->
+        <div class="easter-egg-char" data-position="ideas">
+            <div class="char-icon">💡</div>
+            <div class="hit-effect"></div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span data-lang="contactTitle">연락처</span>
+            </h2>
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3 data-lang="businessEmail">비즈니스 이메일</h3>
+                            <p id="business-email">contact@lshift.io</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3 data-lang="location">위치</h3>
+                            <p data-lang="locationText">Seoul, South Korea</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-links" data-aos="fade-up" data-aos-delay="200">
+                    <h3 data-lang="followUs">팔로우하기</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" title="Instagram" id="instagram-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="YouTube" id="youtube-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="Linktree" id="linktree-link">
+                            <i class="fas fa-link"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Easter Egg Character -->
+        <div class="easter-egg-char" data-position="contact">
+            <div class="char-icon">📧</div>
+            <div class="hit-effect"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-symbol">&lt;&lt;</span>
+                    <span class="logo-text">LShift</span>
+                </div>
+                <p class="footer-tagline">
+                    <span data-lang="footerTagline">Shifting the future, LShift</span>
+                </p>
+                <p class="footer-copyright">
+                    &copy; 2025 LShift. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Detail Modal -->
+    <div id="project-modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-body">
+                <h2 id="modal-title" class="modal-title"></h2>
+                <div class="modal-status-wrapper">
+                    <span id="modal-status" class="modal-status"></span>
+                </div>
+                <p id="modal-description" class="modal-description"></p>
+                <div class="modal-category">
+                    <i class="fas fa-tag"></i>
+                    <span id="modal-category-text"></span>
+                </div>
+                <div class="modal-details">
+                    <h3 data-lang="modalDetailsTitle">프로젝트 세부 정보</h3>
+                    <p data-lang="modalDetailsText">
+                        이 프로젝트에 대한 자세한 정보는 곧 공개될 예정입니다.
+                        더 많은 정보를 원하시면 문의하기를 통해 연락주세요.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Easter Egg Hit Counter (Hidden) -->
+    <div id="easter-egg-counter" class="hidden">
+        <span data-lang="hitCounter">때린 횟수:</span> <span id="hit-count">0</span>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
