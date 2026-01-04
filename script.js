@@ -4,24 +4,24 @@
 
 // Social Media Links (쉽게 수정 가능)
 const SOCIAL_LINKS = {
-    instagram: 'https://www.instagram.com/lshift.official/',  // 실제 링크로 변경
-    youtube: 'https://www.youtube.com/channel/UCfxWYdOE20AG4E8EH2N4cZw',  // 실제 링크로 변경
+    instagram: 'https://www.instagram.com/lshift_official',  // 실제 링크로 변경
+    youtube: 'https://www.youtube.com/@lshift_official',  // 실제 링크로 변경
     linktree: 'https://linktr.ee/lshift'
 };
 
 // Business Email (쉽게 수정 가능)
-const BUSINESS_EMAIL = 'lshift.co@gmail.com';  // 실제 이메일로 변경
+const BUSINESS_EMAIL = 'contact@lshift.io';  // 실제 이메일로 변경
 
 // Projects Data (쉽게 추가/수정 가능)
 const PROJECTS = [
     {
         title: {
-            ko: 'ROGOS : forum',
-            en: 'ROGOS : forum'
+            ko: 'AI 챗봇 앱',
+            en: 'AI Chatbot App'
         },
         description: {
-            ko: '지식인들을 위한 고대 그리스 토론의 장',
-            en: 'A Forum for Ancient Greek Debate Among Intellectuals'
+            ko: '자연어 처리 기반 스마트 대화형 AI 어시스턴트',
+            en: 'Smart conversational AI assistant based on NLP'
         },
         category: 'app',
         status: 'development',
@@ -32,18 +32,114 @@ const PROJECTS = [
     },
     {
         title: {
-            ko: 'Map_Diary',
-            en: 'Map_Diary'
+            ko: '메타버스 게임',
+            en: 'Metaverse Game'
         },
         description: {
-            ko: '지도위에 표시하는 여행 일기 앱',
-            en: 'Travel diary app that displays on a map'
+            ko: '3D 오픈월드 메타버스 소셜 플랫폼',
+            en: '3D open-world metaverse social platform'
         },
-        category: 'app',
+        category: 'game',
+        status: 'q1-2025',
+        statusText: {
+            ko: '2025 Q1 출시 예정',
+            en: 'Q1 2025 Release'
+        }
+    },
+    {
+        title: {
+            ko: '코드 에디터 플러그인',
+            en: 'Code Editor Plugin'
+        },
+        description: {
+            ko: 'AI 기반 코드 자동완성 및 리팩토링 도구',
+            en: 'AI-powered code completion and refactoring tool'
+        },
+        category: 'software',
         status: 'development',
         statusText: {
             ko: '개발 중',
             en: 'In Development'
+        }
+    },
+    {
+        title: {
+            ko: '피트니스 트래커',
+            en: 'Fitness Tracker'
+        },
+        description: {
+            ko: 'AI 코치와 함께하는 스마트 운동 관리 앱',
+            en: 'Smart workout management app with AI coach'
+        },
+        category: 'app',
+        status: 'q2-2025',
+        statusText: {
+            ko: '2025 Q2 출시 예정',
+            en: 'Q2 2025 Release'
+        }
+    },
+    {
+        title: {
+            ko: '퍼즐 어드벤처',
+            en: 'Puzzle Adventure'
+        },
+        description: {
+            ko: '스토리 기반 논리 퍼즐 모바일 게임',
+            en: 'Story-driven logic puzzle mobile game'
+        },
+        category: 'game',
+        status: 'q1-2025',
+        statusText: {
+            ko: '2025 Q1 출시 예정',
+            en: 'Q1 2025 Release'
+        }
+    },
+    {
+        title: {
+            ko: '데이터 분석 플랫폼',
+            en: 'Data Analytics Platform'
+        },
+        description: {
+            ko: '비즈니스 인텔리전스 및 시각화 솔루션',
+            en: 'Business intelligence and visualization solution'
+        },
+        category: 'software',
+        status: 'coming-soon',
+        statusText: {
+            ko: 'Coming Soon',
+            en: 'Coming Soon'
+        }
+    },
+    {
+        title: {
+            ko: '음악 스트리밍 앱',
+            en: 'Music Streaming App'
+        },
+        description: {
+            ko: 'AI 추천 기반 개인화 음악 플랫폼',
+            en: 'Personalized music platform with AI recommendations'
+        },
+        category: 'app',
+        status: 'coming-soon',
+        statusText: {
+            ko: 'Coming Soon',
+            en: 'Coming Soon'
+        }
+    },
+    {
+        title: {
+            ko: '배틀 로얄 게임',
+            en: 'Battle Royale Game'
+        },
+        description: {
+            ko: '모바일 최적화 멀티플레이어 슈팅 게임',
+            en: 'Mobile-optimized multiplayer shooting game'
+        },
+        category: 'game',
+        status: 'coming-soon',
+        statusText: {
+            ko: 'Coming Soon',
+            en: 'Coming Soon'
         }
     }
 ];
@@ -61,7 +157,7 @@ const TRANSLATIONS = {
 
         // Hero Section
         heroTagline1: '작지만 빠른 혁신',
-        heroTagline2: 'Shifting the future, LShift',
+        heroTagline2: 'Left Shift, Right Future',
         heroTagline3: '기술로 미래를 만듭니다',
         viewProjects: '프로젝트 보기',
         contactUs: '연락하기',
@@ -112,7 +208,7 @@ const TRANSLATIONS = {
         modalDetailsText: '이 프로젝트에 대한 자세한 정보는 곧 공개될 예정입니다. 더 많은 정보를 원하시면 문의하기를 통해 연락주세요.',
 
         // Footer
-        footerTagline: 'Shifting the future, LShift',
+        footerTagline: 'Left Shift, Right Future',
 
         // Easter Egg
         hitCounter: '때린 횟수:',
@@ -130,7 +226,7 @@ const TRANSLATIONS = {
 
         // Hero Section
         heroTagline1: 'Small But Fast Innovation',
-        heroTagline2: 'Shifting the future, LShift',
+        heroTagline2: 'Left Shift, Right Future',
         heroTagline3: 'Building Future with Technology',
         viewProjects: 'View Projects',
         contactUs: 'Contact Us',
@@ -181,7 +277,7 @@ const TRANSLATIONS = {
         modalDetailsText: 'Detailed information about this project will be available soon. For more information, please contact us through the inquiry form.',
 
         // Footer
-        footerTagline: 'Shifting the future, LShift',
+        footerTagline: 'Left Shift, Right Future',
 
         // Easter Egg
         hitCounter: 'Hit Count:',
@@ -577,24 +673,22 @@ function initForm() {
     const form = document.getElementById('ideas-form');
 
     form.addEventListener('submit', (e) => {
-        e.preventDefault();
+        // FormSubmit으로 실제 제출됨
+        // 제출 전 유효성 검사만 수행
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
 
-        const formData = {
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            type: document.getElementById('type').value,
-            message: document.getElementById('message').value
-        };
+        if (!name || !email || !message) {
+            e.preventDefault();
+            alert(currentLang === 'ko'
+                ? '모든 필수 항목을 입력해주세요.'
+                : 'Please fill in all required fields.');
+            return;
+        }
 
-        console.log('Form submitted:', formData);
-
-        // Show success message
-        alert(currentLang === 'ko'
-            ? '제출해주셔서 감사합니다! 곧 연락드리겠습니다.'
-            : 'Thank you for your submission! We will contact you soon.');
-
-        // Reset form
-        form.reset();
+        // 폼이 정상적으로 FormSubmit으로 제출됩니다
+        console.log('Form submitted to FormSubmit');
     });
 }
 
