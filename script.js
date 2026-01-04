@@ -672,23 +672,55 @@ function renderProjects(category) {
 function initForm() {
     const form = document.getElementById('ideas-form');
 
-    form.addEventListener('submit', (e) => {
-        // FormSubmit으로 실제 제출됨
-        // 제출 전 유효성 검사만 수행
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        // 유효성 검사
         const name = document.getElementById('name').value.trim();
         const email = document.getElementById('email').value.trim();
         const message = document.getElementById('message').value.trim();
 
         if (!name || !email || !message) {
-            e.preventDefault();
             alert(currentLang === 'ko'
                 ? '모든 필수 항목을 입력해주세요.'
                 : 'Please fill in all required fields.');
             return;
         }
 
-        // 폼이 정상적으로 FormSubmit으로 제출됩니다
-        console.log('Form submitted to FormSubmit');
+        // 제출 버튼 비활성화
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn.querySelector('span').textContent;
+        submitBtn.disabled = true;
+        submitBtn.querySelector('span').textContent = currentLang === 'ko' ? '전송 중...' : 'Sending...';
+
+        try {
+            // Web3Forms로 전송
+            const formData = new FormData(form);
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                alert(currentLang === 'ko'
+                    ? '제출해주셔서 감사합니다! 곧 연락드리겠습니다.'
+                    : 'Thank you for your submission! We will contact you soon.');
+                form.reset();
+            } else {
+                throw new Error('Form submission failed');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert(currentLang === 'ko'
+                ? '전송 중 오류가 발생했습니다. 다시 시도해주세요.'
+                : 'An error occurred while sending. Please try again.');
+        } finally {
+            // 버튼 다시 활성화
+            submitBtn.disabled = false;
+            submitBtn.querySelector('span').textContent = originalBtnText;
+        }
     });
 }
 
