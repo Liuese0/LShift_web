@@ -237,11 +237,12 @@
                     </div>
                 </div>
                 <div class="ideas-form-container" data-aos="fade-left">
-                    <form id="ideas-form" class="contact-form" action="https://formsubmit.co/lshift.co@gmail.com" method="POST">
-                        <!-- FormSubmit 설정 -->
-                        <input type="hidden" name="_subject" value="LShift 웹사이트 새로운 문의">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_template" value="table">
+                    <form id="ideas-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                        <!-- Web3Forms 설정 -->
+                        <input type="hidden" name="access_key" value="6cad5dcc-1221-44a5-a22d-4bc1349730ae">
+                        <input type="hidden" name="subject" value="LShift 웹사이트 새로운 문의">
+                        <input type="hidden" name="from_name" value="LShift Website">
+                        <input type="hidden" name="redirect" value="false">
 
                         <div class="form-group">
                             <label for="name">
