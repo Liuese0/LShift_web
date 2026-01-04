@@ -5,9 +5,9 @@
 // Social Media Links (쉽게 수정 가능)
 const SOCIAL_LINKS = {
     instagram: 'https://www.instagram.com/lshift_official',  // 실제 링크로 변경
-    github: 'https://github.com/lshift',  // 실제 링크로 변경
+    youtube: 'https://www.youtube.com/@lshift_official',  // 실제 링크로 변경
     linkedin: 'https://www.linkedin.com/company/lshift',  // 실제 링크로 변경
-    twitter: 'https://twitter.com/lshift_official'  // 실제 링크로 변경
+    x: 'https://x.com/lshift_official'  // 실제 링크로 변경
 };
 
 // Business Email (쉽게 수정 가능)
@@ -174,18 +174,6 @@ const TRANSLATIONS = {
         value2: '기술 중심',
         value3: '창의성',
 
-        // Tech Section
-        techTitle: '기술 스택',
-        techSubtitle: '최신 기술로 최고의 솔루션을 만듭니다',
-        techFlutter: '크로스 플랫폼 앱 개발',
-        techUnity: '게임 엔진 & 개발',
-        techFirebase: '백엔드 & 클라우드',
-        techMongo: 'NoSQL 데이터베이스',
-        techNode: '서버 사이드 개발',
-        techReact: '모바일 앱 개발',
-        techPython: 'AI & 백엔드 개발',
-        techSQL: '관계형 데이터베이스',
-
         // Projects Section
         projectsTitle: '프로젝트',
         tabAll: '전체',
@@ -217,6 +205,10 @@ const TRANSLATIONS = {
         locationText: 'Seoul, South Korea',
         followUs: '팔로우하기',
         socialNote: '* SNS 링크는 script.js에서 업데이트 가능합니다',
+
+        // Project Modal
+        modalDetailsTitle: '프로젝트 세부 정보',
+        modalDetailsText: '이 프로젝트에 대한 자세한 정보는 곧 공개될 예정입니다. 더 많은 정보를 원하시면 문의하기를 통해 연락주세요.',
 
         // Footer
         footerTagline: 'Left Shift, Right Future',
@@ -253,18 +245,6 @@ const TRANSLATIONS = {
         value2: 'Tech-Centered',
         value3: 'Creativity',
 
-        // Tech Section
-        techTitle: 'Tech Stack',
-        techSubtitle: 'Creating best solutions with latest technologies',
-        techFlutter: 'Cross-platform app development',
-        techUnity: 'Game engine & development',
-        techFirebase: 'Backend & cloud',
-        techMongo: 'NoSQL database',
-        techNode: 'Server-side development',
-        techReact: 'Mobile app development',
-        techPython: 'AI & backend development',
-        techSQL: 'Relational database',
-
         // Projects Section
         projectsTitle: 'Projects',
         tabAll: 'All',
@@ -296,6 +276,10 @@ const TRANSLATIONS = {
         locationText: 'Seoul, South Korea',
         followUs: 'Follow Us',
         socialNote: '* Update SNS links in script.js',
+
+        // Project Modal
+        modalDetailsTitle: 'Project Details',
+        modalDetailsText: 'Detailed information about this project will be available soon. For more information, please contact us through the inquiry form.',
 
         // Footer
         footerTagline: 'Left Shift, Right Future',
@@ -343,6 +327,9 @@ function initializeApp() {
 
     // Initialize projects
     initProjects();
+
+    // Initialize project modal
+    initProjectModal();
 
     // Initialize form
     initForm();
@@ -671,6 +658,11 @@ function renderProjects(category) {
             </div>
         `;
 
+        // Add click event to open modal
+        card.addEventListener('click', () => {
+            openProjectModal(project);
+        });
+
         projectsGrid.appendChild(card);
     });
 
@@ -714,12 +706,67 @@ function initForm() {
 function initSocialLinks() {
     // Update social links
     document.getElementById('instagram-link').href = SOCIAL_LINKS.instagram;
-    document.getElementById('github-link').href = SOCIAL_LINKS.github;
+    document.getElementById('youtube-link').href = SOCIAL_LINKS.youtube;
     document.getElementById('linkedin-link').href = SOCIAL_LINKS.linkedin;
-    document.getElementById('twitter-link').href = SOCIAL_LINKS.twitter;
+    document.getElementById('x-link').href = SOCIAL_LINKS.x;
 
     // Update business email
     document.getElementById('business-email').textContent = BUSINESS_EMAIL;
+}
+
+// ========================================
+// Project Modal
+// ========================================
+
+function openProjectModal(project) {
+    const modal = document.getElementById('project-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalStatus = document.getElementById('modal-status');
+    const modalDescription = document.getElementById('modal-description');
+    const modalCategory = document.getElementById('modal-category-text');
+
+    // Set content
+    modalTitle.textContent = project.title[currentLang];
+    modalDescription.textContent = project.description[currentLang];
+    modalCategory.textContent = project.category;
+
+    // Set status with proper class
+    modalStatus.textContent = project.statusText[currentLang];
+    modalStatus.className = `modal-status status-${project.status}`;
+
+    // Show modal
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeProjectModal() {
+    const modal = document.getElementById('project-modal');
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+// Initialize modal close events
+function initProjectModal() {
+    const modal = document.getElementById('project-modal');
+    const modalClose = document.querySelector('.modal-close');
+    const modalOverlay = document.querySelector('.modal-overlay');
+
+    // Close button
+    if (modalClose) {
+        modalClose.addEventListener('click', closeProjectModal);
+    }
+
+    // Click overlay to close
+    if (modalOverlay) {
+        modalOverlay.addEventListener('click', closeProjectModal);
+    }
+
+    // ESC key to close
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            closeProjectModal();
+        }
+    });
 }
 
 // ========================================
