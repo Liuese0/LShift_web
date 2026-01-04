@@ -6,8 +6,7 @@
 const SOCIAL_LINKS = {
     instagram: 'https://www.instagram.com/lshift_official',  // 실제 링크로 변경
     youtube: 'https://www.youtube.com/@lshift_official',  // 실제 링크로 변경
-    linkedin: 'https://www.linkedin.com/company/lshift',  // 실제 링크로 변경
-    x: 'https://x.com/lshift_official'  // 실제 링크로 변경
+    linktree: 'https://linktr.ee/lshift'
 };
 
 // Business Email (쉽게 수정 가능)
@@ -200,11 +199,9 @@ const TRANSLATIONS = {
         // Contact Section
         contactTitle: '연락처',
         businessEmail: '비즈니스 이메일',
-        emailNote: '* 실제 이메일 주소로 업데이트 필요',
         location: '위치',
         locationText: 'Seoul, South Korea',
         followUs: '팔로우하기',
-        socialNote: '* SNS 링크는 script.js에서 업데이트 가능합니다',
 
         // Project Modal
         modalDetailsTitle: '프로젝트 세부 정보',
@@ -271,11 +268,9 @@ const TRANSLATIONS = {
         // Contact Section
         contactTitle: 'Contact',
         businessEmail: 'Business Email',
-        emailNote: '* Update with actual email address',
         location: 'Location',
         locationText: 'Seoul, South Korea',
         followUs: 'Follow Us',
-        socialNote: '* Update SNS links in script.js',
 
         // Project Modal
         modalDetailsTitle: 'Project Details',
@@ -707,8 +702,7 @@ function initSocialLinks() {
     // Update social links
     document.getElementById('instagram-link').href = SOCIAL_LINKS.instagram;
     document.getElementById('youtube-link').href = SOCIAL_LINKS.youtube;
-    document.getElementById('linkedin-link').href = SOCIAL_LINKS.linkedin;
-    document.getElementById('x-link').href = SOCIAL_LINKS.x;
+    document.getElementById('linktree-link').href = SOCIAL_LINKS.linktree;
 
     // Update business email
     document.getElementById('business-email').textContent = BUSINESS_EMAIL;
