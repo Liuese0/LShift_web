@@ -4,24 +4,24 @@
 
 // Social Media Links (쉽게 수정 가능)
 const SOCIAL_LINKS = {
-    instagram: 'https://www.instagram.com/lshift_official',  // 실제 링크로 변경
-    youtube: 'https://www.youtube.com/@lshift_official',  // 실제 링크로 변경
+    instagram: 'https://www.instagram.com/lshift.official/',  // 실제 링크로 변경
+    youtube: 'https://www.youtube.com/@LShift.official',  // 실제 링크로 변경
     linktree: 'https://linktr.ee/lshift'
 };
 
 // Business Email (쉽게 수정 가능)
-const BUSINESS_EMAIL = 'contact@lshift.io';  // 실제 이메일로 변경
+const BUSINESS_EMAIL = 'lshift.co@gmail.com';  // 실제 이메일로 변경
 
 // Projects Data (쉽게 추가/수정 가능)
 const PROJECTS = [
     {
         title: {
-            ko: 'AI 챗봇 앱',
-            en: 'AI Chatbot App'
+            ko: 'ROGOS : Forum',
+            en: 'ROGOS : Forum'
         },
         description: {
-            ko: '자연어 처리 기반 스마트 대화형 AI 어시스턴트',
-            en: 'Smart conversational AI assistant based on NLP'
+            ko: '현대 지식인들을 위한 고대 그리스의 토론장',
+            en: 'Ancient Greek Forum for Modern Intellectuals'
         },
         category: 'app',
         status: 'development',
@@ -32,116 +32,20 @@ const PROJECTS = [
     },
     {
         title: {
-            ko: '메타버스 게임',
-            en: 'Metaverse Game'
+            ko: 'Map_diary',
+            en: 'Map_diary'
         },
         description: {
-            ko: '3D 오픈월드 메타버스 소셜 플랫폼',
-            en: '3D open-world metaverse social platform'
+            ko: '지도위에 표시하는 일기장',
+            en: 'A diary marked on a map'
         },
-        category: 'game',
-        status: 'q1-2025',
-        statusText: {
-            ko: '2025 Q1 출시 예정',
-            en: 'Q1 2025 Release'
-        }
-    },
-    {
-        title: {
-            ko: '코드 에디터 플러그인',
-            en: 'Code Editor Plugin'
-        },
-        description: {
-            ko: 'AI 기반 코드 자동완성 및 리팩토링 도구',
-            en: 'AI-powered code completion and refactoring tool'
-        },
-        category: 'software',
+        category: 'app',
         status: 'development',
         statusText: {
             ko: '개발 중',
             en: 'In Development'
         }
     },
-    {
-        title: {
-            ko: '피트니스 트래커',
-            en: 'Fitness Tracker'
-        },
-        description: {
-            ko: 'AI 코치와 함께하는 스마트 운동 관리 앱',
-            en: 'Smart workout management app with AI coach'
-        },
-        category: 'app',
-        status: 'q2-2025',
-        statusText: {
-            ko: '2025 Q2 출시 예정',
-            en: 'Q2 2025 Release'
-        }
-    },
-    {
-        title: {
-            ko: '퍼즐 어드벤처',
-            en: 'Puzzle Adventure'
-        },
-        description: {
-            ko: '스토리 기반 논리 퍼즐 모바일 게임',
-            en: 'Story-driven logic puzzle mobile game'
-        },
-        category: 'game',
-        status: 'q1-2025',
-        statusText: {
-            ko: '2025 Q1 출시 예정',
-            en: 'Q1 2025 Release'
-        }
-    },
-    {
-        title: {
-            ko: '데이터 분석 플랫폼',
-            en: 'Data Analytics Platform'
-        },
-        description: {
-            ko: '비즈니스 인텔리전스 및 시각화 솔루션',
-            en: 'Business intelligence and visualization solution'
-        },
-        category: 'software',
-        status: 'coming-soon',
-        statusText: {
-            ko: 'Coming Soon',
-            en: 'Coming Soon'
-        }
-    },
-    {
-        title: {
-            ko: '음악 스트리밍 앱',
-            en: 'Music Streaming App'
-        },
-        description: {
-            ko: 'AI 추천 기반 개인화 음악 플랫폼',
-            en: 'Personalized music platform with AI recommendations'
-        },
-        category: 'app',
-        status: 'coming-soon',
-        statusText: {
-            ko: 'Coming Soon',
-            en: 'Coming Soon'
-        }
-    },
-    {
-        title: {
-            ko: '배틀 로얄 게임',
-            en: 'Battle Royale Game'
-        },
-        description: {
-            ko: '모바일 최적화 멀티플레이어 슈팅 게임',
-            en: 'Mobile-optimized multiplayer shooting game'
-        },
-        category: 'game',
-        status: 'coming-soon',
-        statusText: {
-            ko: 'Coming Soon',
-            en: 'Coming Soon'
-        }
-    }
 ];
 
 // Translations
@@ -157,7 +61,7 @@ const TRANSLATIONS = {
 
         // Hero Section
         heroTagline1: '작지만 빠른 혁신',
-        heroTagline2: 'Left Shift, Right Future',
+        heroTagline2: 'Shifting the future',
         heroTagline3: '기술로 미래를 만듭니다',
         viewProjects: '프로젝트 보기',
         contactUs: '연락하기',
@@ -208,7 +112,7 @@ const TRANSLATIONS = {
         modalDetailsText: '이 프로젝트에 대한 자세한 정보는 곧 공개될 예정입니다. 더 많은 정보를 원하시면 문의하기를 통해 연락주세요.',
 
         // Footer
-        footerTagline: 'Left Shift, Right Future',
+        footerTagline: 'Shifting the future',
 
         // Easter Egg
         hitCounter: '때린 횟수:',
@@ -226,7 +130,7 @@ const TRANSLATIONS = {
 
         // Hero Section
         heroTagline1: 'Small But Fast Innovation',
-        heroTagline2: 'Left Shift, Right Future',
+        heroTagline2: 'Shifting the future',
         heroTagline3: 'Building Future with Technology',
         viewProjects: 'View Projects',
         contactUs: 'Contact Us',
@@ -277,7 +181,7 @@ const TRANSLATIONS = {
         modalDetailsText: 'Detailed information about this project will be available soon. For more information, please contact us through the inquiry form.',
 
         // Footer
-        footerTagline: 'Left Shift, Right Future',
+        footerTagline: 'Shifting the future',
 
         // Easter Egg
         hitCounter: 'Hit Count:',

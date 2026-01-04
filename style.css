@@ -79,6 +79,12 @@ body.light-mode {
     box-sizing: border-box;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -91,12 +97,16 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     transition: background-color var(--transition-normal), color var(--transition-normal);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 var(--spacing-md);
+    width: 100%;
 }
 
 section {
@@ -163,7 +173,8 @@ section {
 }
 
 .loading-bar {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     height: 4px;
     background: var(--bg-secondary);
     border-radius: 2px;
@@ -343,13 +354,13 @@ body.light-mode .navbar {
 /* Mobile Menu */
 .mobile-menu {
     position: fixed;
-    top: 70px;
+    top: 0;
     right: -100%;
     width: 250px;
-    height: calc(100vh - 70px);
+    height: 100vh;
     background: var(--bg-secondary);
     backdrop-filter: blur(10px);
-    padding: 2rem;
+    padding: 5rem 2rem 2rem;
     transition: right var(--transition-normal);
     z-index: 999;
     box-shadow: var(--shadow-lg);
@@ -418,6 +429,8 @@ body.light-mode .navbar {
     text-align: center;
     z-index: 2;
     max-width: 900px;
+    width: 100%;
+    padding: 0 1rem;
 }
 
 .hero-logo {
@@ -455,6 +468,7 @@ body.light-mode .navbar {
     align-items: center;
     justify-content: center;
     gap: 0.2rem;
+    flex-wrap: wrap;
 }
 
 .typing-cursor {
@@ -665,6 +679,8 @@ body.light-mode .navbar {
     color: var(--text-secondary);
     margin-bottom: 1rem;
     line-height: 1.8;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .core-values {
@@ -819,6 +835,8 @@ body.light-mode .navbar {
     color: var(--text-secondary);
     margin-bottom: 1rem;
     line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .project-tags {
@@ -886,6 +904,8 @@ body.light-mode .navbar {
 .info-card p {
     color: var(--text-secondary);
     line-height: 1.8;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .ideas-form-container {
@@ -1163,6 +1183,8 @@ body.light-mode .navbar {
     font-size: 1.1rem;
     line-height: 1.8;
     margin-bottom: 2rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .modal-category {
@@ -1383,6 +1405,14 @@ body.light-mode .navbar {
         display: flex;
     }
 
+    .nav-logo {
+        font-size: 1.2rem;
+    }
+
+    .logo-symbol {
+        font-size: 1.5rem;
+    }
+
     .hero-symbol {
         font-size: 4rem;
     }
@@ -1393,6 +1423,8 @@ body.light-mode .navbar {
 
     .hero-subtitle {
         font-size: 1.2rem;
+        min-height: 40px;
+        padding: 0 1rem;
     }
 
     .section-title {
@@ -1402,6 +1434,12 @@ body.light-mode .navbar {
     .hero-buttons {
         flex-direction: column;
         align-items: stretch;
+        padding: 0 1rem;
+    }
+
+    .btn {
+        padding: 0.875rem 1.5rem;
+        justify-content: center;
     }
 
     .projects-grid {
@@ -1427,6 +1465,33 @@ body.light-mode .navbar {
         flex-direction: column;
     }
 
+    .value-item {
+        width: 100%;
+    }
+
+    .code-line {
+        font-size: 1.2rem;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 1rem;
+    }
+
+    .modal-body {
+        padding: 2.5rem 1.5rem 1.5rem;
+    }
+
+    .contact-item {
+        padding: 1.5rem;
+    }
+
+    .social-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
+
     .easter-egg-char {
         font-size: 2rem;
     }
@@ -1442,6 +1507,11 @@ body.light-mode .navbar {
         right: 20px;
         top: auto;
         left: auto;
+    }
+
+    #easter-egg-counter {
+        padding: 0.75rem 1rem;
+        font-size: 0.9rem;
     }
 }
 
@@ -1463,16 +1533,107 @@ body.light-mode .navbar {
         font-size: 2.5rem;
     }
 
+    .hero-subtitle {
+        font-size: 1rem;
+        min-height: 30px;
+    }
+
     .nav-container {
-        padding: 1rem;
+        padding: 0.75rem 1rem;
+    }
+
+    .nav-logo {
+        font-size: 1rem;
+    }
+
+    .logo-symbol {
+        font-size: 1.25rem;
+    }
+
+    .control-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 0.9rem;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
     }
 
     .code-line {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 
     .shift-demo {
         padding: 1.5rem;
+    }
+
+    .about-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .info-card {
+        padding: 1.5rem;
+    }
+
+    .info-card i {
+        font-size: 2.5rem;
+    }
+
+    .info-card h3 {
+        font-size: 1.25rem;
+    }
+
+    .ideas-form-container {
+        padding: 1.5rem;
+    }
+
+    .btn {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.95rem;
+    }
+
+    .project-card {
+        padding: 1.5rem;
+    }
+
+    .project-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .project-title {
+        font-size: 1.25rem;
+    }
+
+    .mobile-menu {
+        width: 100%;
+        right: -100%;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 16px;
+    }
+
+    .scroll-indicator {
+        font-size: 0.9rem;
+    }
+
+    .loading-content {
+        padding: 0 1rem;
+    }
+
+    .logo-loading .shift-symbol {
+        font-size: 3rem;
+    }
+
+    .logo-loading .loading-text {
+        font-size: 2rem;
     }
 }
 
